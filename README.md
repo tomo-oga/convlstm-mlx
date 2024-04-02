@@ -23,11 +23,14 @@ The expected input for this layer has shape `NHWC` or  `HWC` where:
 
 And returns a `Tuple` of the hidden state, $`H_t`$, and the cell state, $`C_t`$, each with shape `NHWO`. 
 
-**Args:** \
+**Args:** 
 
-`in_channels` (int): The number of input channels, `C`.\
-`out_channels` (int): The number of output channels, `O`.\
-`kernel_size` (int): The size of the convolution filters, must be odd to keep spatial dimensions with padding. Default: `5`. \
+`in_channels (int)`: The number of input channels, `C`.\
+`out_channels (int)`: The number of output channels, `O`.\
+`kernel_size (int)`: The size of the convolution filters, must be odd to keep spatial dimensions with padding. Default: `5`. \
+`stride (Union[int, tuple]` : The stride of the convolution.
+`padding (Union[int, tuple]` : Padding to add to the input for convolution.
+`dilation (Union[int, tuple]` : Dilation of the convolution.
 `bias` (bool): Whether the convolutional calculation should use biases or not. Default: `True.`
 
 ### `ConvLSTM`
@@ -41,6 +44,18 @@ The expected input for this layer has shape `NLHWC` or  `LHWC` where:
 * `H` is the input's spatial height dimension
 * `W` is the input's spatial width dimension
 * `C` is the input's channel dimension
+
+**Args:**
+`in_channels (int)`: The number of input channels, `C`.\
+`out_channels (int)`: The number of output channels, `O`.\
+`kernel_size (int)`: The size of the convolution filters, must be odd to keep spatial dimensions with padding. Default: `5`. \
+`bias` (bool): Whether the convolutional calculation should use biases or not. Default: `True.`
+
+The following features are yet to be implemented from initial release:\
+[] Bi-directionality - allows the conv-lstm to unroll both forwards and backwards across the sequence
+[] Allow for stride customization
+[] Allow for customizable padding along with modes 'same' and 'valid'
+
 
 
 
