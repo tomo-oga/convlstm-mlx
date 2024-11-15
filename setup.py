@@ -12,7 +12,7 @@ setup(
     license='MIT',
     packages=find_packages(),
     install_requires=[
-        'torch',
+        'mlx',
     ],
     classifiers=[
         "Programming Language :: Python :: 3",
