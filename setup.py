@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='convlstm-mlx',
-    version='0.1.0',
+    version='0.1.1-alpha',
     description='An MLX implementation of ConvLSTM',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
