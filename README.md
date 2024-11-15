@@ -1,10 +1,12 @@
-# An Implementation for ConvLSTM in Apple's Array Framework `mlx`
+[![PyPi Release](https://github.com/tomo-oga/convlstm-mlx/actions/workflows/python-publish.yml/badge.svg)](https://github.com/tomo-oga/convlstm-mlx/actions/workflows/python-publish.yml)
+
+# An Implementation for ConvLSTM in Apple's Array Framework, MLX
 
 A Convolutional LSTM recurrent layer. 
 
 
 ### `_conv_lstm_cell` 
-This `Module` computes the hidden and cell state for a time-step, expressed as:
+This `nn.Module` computes the hidden and cell state for a time-step, expressed as:
 
 $` i_t = \sigma (W_{xi} \ast X_t + W_{hi} \ast H_{t-1} + W_{ci} \odot C_{t-1} + b_i) `$ \
 $` f_t = \sigma (W_{xf} \odot X_t \ast H_{t-1} + W_{cf} \odot C_{t-1} + b_f) `$\
@@ -51,10 +53,10 @@ The expected input for this layer has shape `NLHWC` or  `LHWC` where:
 `kernel_size (int)`: The size of the convolution filters, must be odd to keep spatial dimensions with padding. Default: `5`. \
 `bias` (bool): Whether the convolutional calculation should use biases or not. Default: `True.`
 
-The following features are yet to be implemented from initial release:\
-[] Bi-directionality - allows the conv-lstm to unroll both forwards and backwards across the sequence
-[] Allow for stride customization
-[] Allow for customizable padding along with modes 'same' and 'valid'
+The following features are yet to be implemented from initial release:
+- [ ] Bi-directionality - allows the conv-lstm to unroll both forwards and backwards across the sequence
+- [ ] Allow for stride customization
+- [ ] Allow for customizable padding along with modes 'same' and 'valid'
 
 
 
