@@ -9,7 +9,7 @@ This `Module` computes the hidden and cell state for a time-step, expressed as:
 $` i_t = \sigma (W_{xi} \ast X_t + W_{hi} \ast H_{t-1} + W_{ci} \odot C_{t-1} + b_i) `$ \
 $` f_t = \sigma (W_{xf} \odot X_t \ast H_{t-1} + W_{cf} \odot C_{t-1} + b_f) `$\
 $` C_t = f_t \odot X_t + i_t \odot tanh(W_{xc} \ast X_{t} + W_{hc} \ast H_{t-1} + b_c) `$ \
-$` o_t = \sigma(W_{xo} \ast X_t +  W_{ho} \ast H_{t-1} + W_{co} \odot C_t + b_o `$ \
+$` o_t = \sigma(W_{xo} \ast X_t +  W_{ho} \ast H_{t-1} + W_{co} \odot C_t + b_o )`$ \
 $` H_t = o_t \odot tanh(C_t) `$ \
 
 Where $`\sigma`$ and $`\odot`$ represent the hyperbolic sigmoid function and Hadamard product respectively.
